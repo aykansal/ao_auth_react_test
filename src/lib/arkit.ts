@@ -664,7 +664,6 @@ export async function getArnsRecord({ ARNS_NAME }: { ARNS_NAME: string }) {
 
     const arnsNameRecord = await ario.getArNSRecord({ name: ARNS_NAME }).catch(() => {
         console.error(`ARNS name [${ARNS_NAME}] does not exist`);
-        process.exit(1);
     });
     return arnsNameRecord
 }
