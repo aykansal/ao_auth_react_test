@@ -5,11 +5,11 @@ import { getStrategy } from "./lib/strategy.ts";
 import { ArweaveWalletKit } from "@arweave-wallet-kit/react";
 import { type Strategy } from "@arweave-wallet-kit/core/strategy";
 import { HashRouter, Route, Routes } from "react-router";
-import { Wander } from "./pages/wander";
-import { Wauth } from "./pages/wauth";
 import { Suspense } from "react";
 import App from "./App.tsx";
 import Home from "./pages/Landing.tsx";
+import { Wander } from "./pages/Wander.tsx";
+import { Wauth } from "./pages/Wauth.tsx";
 
 export default function Main() {
   const strategies = [
