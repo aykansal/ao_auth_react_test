@@ -8,6 +8,7 @@ export default function App() {
         <NavLink to="/">Home</NavLink>
         <NavLink to="/wander">Wander</NavLink>
         <NavLink to="/wauth">Wauth</NavLink>
+        <NavLink to="/chat">Chat</NavLink>
       </nav>
       <Outlet />
     </div>
