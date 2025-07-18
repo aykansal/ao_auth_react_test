@@ -1,16 +1,15 @@
-// @ts-nocheck
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { WanderConnect } from "@wanderapp/connect";
-import Arweave from "arweave";
+// import Arweave from "arweave";
 
-const arweave = Arweave.init({
-  host: "arweave.net",
-  port: 443,
-  protocol: "https",
-});
+// const arweave = Arweave.init({
+//   host: "arweave.net",
+//   port: 443,
+//   protocol: "https",
+// });
 
-export function Wander() {
-  const wanderRef = useRef<any>(null);
+export default function Wander() {
+  // const wanderRef = useRef<any>(null);
 
   useEffect(() => {
     async function initAndTestWander() {
@@ -23,6 +22,7 @@ export function Wander() {
         "SIGN_TRANSACTION",
       ]);
       const tx = "ghgh ";
+      // @ts-expect-error ingo
       await window.arweaveWallet.sign(tx);
       wander.open();
     }

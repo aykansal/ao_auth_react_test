@@ -7,7 +7,7 @@ import { fixConnection, WAuthProviders } from "@wauth/strategy";
 import { useEffect, useState } from "react";
 import { getActiveWAuthProvider, getStrategy } from "../lib/strategy";
 
-export function Wauth() {
+export default function Wauth() {
   const [accessToken, setAccessToken] = useState<string | null>(null);
   const [email, setEmail] = useState<string | null>(null);
   const [connectedWallets, setConnectedWallets] = useState<any[]>([]);

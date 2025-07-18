@@ -7,7 +7,6 @@ import {
   type WalletDetails,
 } from "../lib/arkit";
 import { useState } from "react";
-import { Outlet } from "react-router";
 
 const Home = () => {
   const [walletDetails, setWalletDetails] = useState<WalletDetails>();
@@ -15,8 +14,6 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-gray-950 text-gray-100 p-8">
       <div className="max-w-4xl mx-auto">
-        <Outlet />
-
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-white mb-4">Arweave Demo</h1>
           <p className="text-gray-400 text-lg">

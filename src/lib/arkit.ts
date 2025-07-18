@@ -61,8 +61,8 @@ interface MessageResponse {
 
 // Common tags used across the application
 export const CommonTags: Tag[] = [
-    { name: 'Name', value: 'Anon' },
-    { name: 'Version', value: '2.0.0' },
+    { name: 'Name', value: 'test' },
+    { name: 'Version', value: '1.0.0' },
     { name: 'Authority', value: 'fcoN_xJeisVsPXA-trzVAuIiqO3ydLQxM-L4XbrQKzY' },
     { name: 'Scheduler', value: '_GQ33BkPtZrqxA84vM8Zk-N2aO0toNNu_C-l-rawrBA' },
 ];
@@ -335,7 +335,6 @@ export async function readHandler({
         GRAPHQL_URL,
         MODE,
         CU_URL,
-
     })
     try {
         console.log('Reading handler using legacy dryrun...');

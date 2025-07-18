@@ -4,12 +4,10 @@ import { WAuthProviders } from "@wauth/strategy";
 import { getStrategy } from "./lib/strategy.ts";
 import { ArweaveWalletKit } from "@arweave-wallet-kit/react";
 import { type Strategy } from "@arweave-wallet-kit/core/strategy";
-import { HashRouter } from "react-router";
-// import { Suspense } from "react";
+import { HashRouter, Route, Routes } from "react-router";
 import App from "./App.tsx";
-// import Home from "./pages/Landing.tsx";
-// import { Wander } from "./pages/Wander.tsx";
-// import { Wauth } from "./pages/Wauth.tsx";
+import { Suspense } from "react";
+import { Home, Bazar, Wander, Wauth, Chat } from "./pages";
 
 export default function Main() {
   const strategies = [
@@ -32,18 +30,20 @@ export default function Main() {
         accent: { r: 110, g: 169, b: 100 },
       }}
     >
-      {/* <Suspense fallback={<div>Loading...</div>}> */}
+      <Suspense fallback={<div>Loading...</div>}>
         <HashRouter>
           <App />
-          {/* <Routes>
+          <Routes>
             <Route element={<App />}>
               <Route index element={<Home />} />
               <Route path="wander" element={<Wander />} />
               <Route path="wauth" element={<Wauth />} />
+              <Route path="chat" element={<Chat />} />
+              <Route path="bazar" element={<Bazar />} />
             </Route>
-          </Routes> */}
+          </Routes>
         </HashRouter>
-      {/* </Suspense> */}
+      </Suspense>
     </ArweaveWalletKit>
   );
 }
